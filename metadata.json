@@ -1,0 +1,6 @@
+{
+  "name": "افشار اگری - سامانه تخصصی تغذیه و آفات پسته قزوین",
+  "description": "سامانه تخصصی توصیه کودی، تجویز سموم و مدیریت تلفیقی باغات پسته خوشه قرمز قزوین - مهندس علی افشار، دانشجوی دکتری کشاورزی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
