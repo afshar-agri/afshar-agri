@@ -1,6 +1,6 @@
 # افشار اگری (Afshar Agri)
 > سامانه تخصصی توصیه کودی، تجویز سموم و مدیریت باغات پسته خوشه قرمز قزوین  
-> **موسس:** مهندس علی افشار (دانشجوی دکتری کشاورزی)
+> **موسس و کارشناس علمی:** مهندس علی افشار (دانشجوی دکتری کشاورزی)
 
 ---
 
@@ -18,24 +18,27 @@
 
 ---
 
-## نحوه استقرار روی GitHub Pages (مخصوص علی افشار)
+## راهنمای رفع ارور ۴۰۴ در GitHub Pages:
+اگر پس از باز کردن آدرس با ارور زیر مواجه شدید:
+`There isn't a GitHub Pages site here.`
 
-این پروژه از قبل در `vite.config.ts` با `base: './'` تنظیم شده است، بنابراین بدون هیچ مشکلی روی GitHub Pages بارگذاری می‌شود.
-
-### دستورات گیت برای ارسال به ریپازیتوری:
+### علت و نحوه حل در ۳ دقیقه:
+1. **عمومی بودن مخزن (Public):** در پلن عادی گیت‌هاب، GitHub Pages فقط روی ریپازیتوری‌های **Public** فعال می‌شود. اگر ریپازیتوری را Private ساختید، به Settings رفته و آن را Public کنید.
+2. **ارسال فایل‌ها به گیت‌هاب:** فایل‌ها باید از طریق دستورات زیر به ریپازیتوری شما ارسال شوند:
 
 ```bash
 git init
 git add .
-git commit -m "Initial commit for Afshar Agri web application"
+git commit -m "Release Afshar Agri web application"
 git branch -M main
 git remote add origin https://github.com/aafshar268/afshar-agri.git
 git push -u origin main
 ```
 
-### فعال‌سازی خودکار در گیت‌هاب:
-1. در صفحه ریپازیتوری در گیت‌هاب به مسیر **Settings** بروید.
-2. از منوی چپ گزینه **Pages** را انتخاب کنید.
-3. در بخش **Build and deployment** منوی کشویی Source را روی **GitHub Actions** قرار دهید.
-4. فایل آماده `.github/workflows/deploy.yml` به صورت خودکار پروژه را بیلد و منتشر می‌کند.
-5. آدرس سایت شما: `https://aafshar268.github.io/afshar-agri/`
+3. **سریع‌ترین روش استقرار (با یک دستور):**
+پکیج `gh-pages` به پروژه اضافه شده است. کافیست در ترمینال دستور زیر را اجرا کنید:
+```bash
+npm run deploy
+```
+این دستور پروژه را بیلد کرده و مستقیم به شاخه `gh-pages` ارسال می‌کند. سپس در گیت‌هاب به مسیر **Settings > Pages** بروید و شاخه را روی **gh-pages** بگذارید. ظرف ۱ دقیقه سایت شما در آدرس زیر بالا خواهد آمد:
+`https://aafshar268.github.io/afshar-agri/`
